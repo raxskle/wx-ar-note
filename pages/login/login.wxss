@@ -1,0 +1,69 @@
+/* pages/login/login.wxss */
+.container {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    /* font-size: 14px; */
+    z-index: 20;
+/* 		background-image: url("@/static/fakebg.jpg");
+    background-size: 100%; */
+    background-color: #E8E8E8;
+
+}
+    
+.btnwrap{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;		
+}
+
+.btnContainer{
+    height: 25vh;
+    width: 100vw;
+    margin-bottom: 6vh;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 21;
+}
+.btnbox{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navigator {
+    z-index: 22;
+}
+
+.bgimg{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    height:94vh;
+    width: 100vw;
+    object-fit: contain;
+}
+.btmtext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btmtext text{
+    color: #1e1e1e;
+}
+.btnbox button{
+    background-color: rgb(244, 170, 63);
+    color: white;
+    padding: 2vmin;
+    width: 30vw;
+    box-sizing: border-box;
+    
+}

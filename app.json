@@ -1,0 +1,28 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/squareDetail/squareDetail",
+        "pages/squareAll/squareAll",
+        "pages/index/index",
+        "pages/home/home",
+        "pages/write/write",
+        "pages/share/share"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "subpackages": [
+        {
+            "root": "packageA/",
+            "pages": [
+                "pages/index"
+            ]
+        }
+    ]
+}

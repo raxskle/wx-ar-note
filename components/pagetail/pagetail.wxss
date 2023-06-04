@@ -1,0 +1,21 @@
+/* components/pagetail/pagetail.wxss */
+.pagetail{
+    width: 100vw;
+    height: 6vh;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+    
+.bytext{
+    font-size: 14px;
+    /* font-weight: 600; */
+}

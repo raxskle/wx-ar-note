@@ -1,0 +1,79 @@
+.container{
+  overflow: hidden;
+}
+
+.canvas-container{
+  position: absolute;
+  top: 120vh;
+}
+
+.cover{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 1000;
+}
+
+.side-bar {
+  position: fixed;
+  top: 36px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.side-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 4px 8px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-item > image {
+  margin-bottom: 4px;
+}
+
+.side-item > text {
+  font-size: 16px;
+}
+
+.img-position {
+  width: 19px;
+  height: 25px;
+}
+
+.img-share {
+  width: 24px;
+  height: 23px;
+}
+
+.img-camera {
+  width: 24px;
+  height: 20px;
+}
+
+.btn-send {
+  position: fixed;
+  width: 30vw;
+  height: 5vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  bottom: 100px;
+  border-radius: 5px;
+  background-color: #f4aa3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.btn-send > text {
+  color: white;
+  font-size: 16px;
+}

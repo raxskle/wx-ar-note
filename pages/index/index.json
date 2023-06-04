@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ar-frame": "../../components/ar-frame/index"
+  },
+  "disableScroll": true
+}

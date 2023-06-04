@@ -1,0 +1,30 @@
+<xr-scene ar-system="modes:Marker" bind:ready="handleReady">
+  <xr-assets bind:loaded="handleAssetsLoaded">
+    <xr-asset-load type="video-texture" asset-id="hikari" options="loop:true" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/xr-frame-team/2dmarker/hikari-v.mp4" />
+    <xr-asset-material asset-id="mat" effect="simple" uniforms="u_baseColorMap: video-hikari" />
+    <xr-asset-load type="image" asset-id="patt" src="/assets/images/patt.png" />
+    <xr-asset-load type="gltf" asset-id="gltfModel0" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel1" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel2" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel3" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel4" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel5" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel6" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel7" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel8" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel9" src="/assets/paper.gltf" />
+  </xr-assets>
+  <xr-node wx:if="{{loaded}}">
+    <xr-ar-tracker mode="Marker" bind:ar-tracker-switch="handleTrackerSwitch" src="/assets/images/patt.png">
+      <!-- <xr-node node-id="node1" position="0 0 0">
+        <xr-gltf id="myGLTF" model="gltfModel" scale="0.15 0.15 0.15" bind:gltf-loaded="handleGLTFLoaded"></xr-gltf>
+      </xr-node> -->
+      <xr-node wx:for="{{nodeList}}" wx:key="unique" wx:for-index="index">
+        <xr-gltf id="paperGLTF{{index}}" model="gltfModel{{index}}" position="{{positionList[index]}}" scale="0.15 0.15 0.15" bind:gltf-loaded="handleGLTFLoaded"></xr-gltf>
+      </xr-node>
+    </xr-ar-tracker>
+  </xr-node>
+  <xr-light type="ambient" color="1 1 1" intensity="1" />
+  <xr-light type="directional" rotation="40 170 0" color="1 1 1" intensity="3" />
+  <xr-camera clear-color="0.4 0.8 0.6 1" background="ar" is-ar-camera />
+</xr-scene>

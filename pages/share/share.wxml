@@ -1,0 +1,16 @@
+<!--pages/share/share.wxml-->
+<view class="container">
+		<view class="popupwrap"> 
+			<view class="popup">
+				<view class="canvasBox">
+
+				</view>
+				<view class="btnBar">
+					<button class="sharebtn cancel" bind:tap="backToAR" >取消</button>
+					<button class="sharebtn saveImg">保存到相册</button>
+				</view>  
+			</view> 			
+		</view>
+
+		<pagetail></pagetail>
+	</view>

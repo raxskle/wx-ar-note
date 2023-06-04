@@ -1,0 +1,15 @@
+<!--components/messageItem/messageItem.wxml-->
+<view class="messageItem">
+    <view class="messageBox">
+        <view class="locationLabel">
+            <image class="locationIcon"  src="../../assets/locationicon.png"></image>
+            {{locationLabel}}
+        </view>
+        <view class="messageText">{{messageText}}</view>
+        <view class="messageinfo"> 
+            <view class="writer">{{writer}}</view>
+            <view class="writeTime">{{writeTime}}</view>
+        </view>
+
+    </view>
+</view>

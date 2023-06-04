@@ -1,0 +1,5 @@
+<!--components/pagetail/pagetail.wxml-->
+<view class="pagetail">
+    <image class="bylogo" src="../../assets/by-logo-min.png" style="width: 2.5vh; height: 2.5vh;" mode="aspectFit"></image>
+    <text class="bytext"> Powered By Bingyan Studio</text>
+</view>

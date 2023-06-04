@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "pagetail": "../../components/pagetail/pagetail",
+        "messageItem": "../../components/messageItem/messageItem"
+    }
+}

@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<image class="bgimg" src="https://h5.hust.online/ar-note/index-bg.jpg"  mode="aspectFill"></image>
+	<view class="container">
+		<view class="btnwrap">
+			<view class="btnContainer">
+				<view class="btnbox">
+					<!-- <navigator class="toARPage" open-type="navigate" url="../write/write?location_name=东九教学楼" > -->
+					<!-- <navigator class="toARPage" open-type="navigate" url="../share/share" > -->
+					<navigator class="toARPage" open-type="navigate" url="../index/index" >
+						<button type="default">
+						{{toARBtn}}
+						</button>
+					</navigator>
+					<navigator class="toSquarePage" open-type="navigate" url="../squareAll/squareAll" >
+						<button type="default">
+						{{toSquareBtn}}
+						</button>
+					</navigator>
+				</view>
+				
+				<view class="btmtext">
+					<text>
+						我们在学校各个角落贴了不同的场所AR码						
+					</text>
+					<text>
+						找到才能留言哦						
+					</text>
+				</view>
+			</view>
+		</view>
+
+		<pagetail></pagetail>	
+	</view>
