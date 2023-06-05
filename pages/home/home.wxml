@@ -4,18 +4,12 @@
 		<view class="btnwrap">
 			<view class="btnContainer">
 				<view class="btnbox">
-					<!-- <navigator class="toARPage" open-type="navigate" url="../write/write?location_name=东九教学楼" > -->
-					<!-- <navigator class="toARPage" open-type="navigate" url="../share/share" > -->
-					<navigator class="toARPage" open-type="navigate" url="../index/index" >
-						<button type="default">
+						<button type="default" class="toARPage" bind:tap="toARPage">
 						{{toARBtn}}
 						</button>
-					</navigator>
-					<navigator class="toSquarePage" open-type="navigate" url="../squareAll/squareAll" >
-						<button type="default">
+						<button type="default" class="toSquarePage" bind:tap="toSquareAll">
 						{{toSquareBtn}}
 						</button>
-					</navigator>
 				</view>
 				
 				<view class="btmtext">

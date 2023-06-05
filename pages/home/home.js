@@ -12,6 +12,16 @@ Page({
         toSquareBtn : "纸条广场",
         location: ""
     },
+    toARPage(){
+        wx.navigateTo({
+            url:"../index/index" + "?" + "position=" + app.globalData.location 
+        })
+    },
+    toSquareAll(){
+        wx.navigateTo({
+            url:"../squareAll/squareAll" 
+        })
+    },
 
     /**
      * 生命周期函数--监听页面加载
