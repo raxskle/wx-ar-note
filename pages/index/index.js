@@ -4,6 +4,15 @@ const app = getApp();
 
 const url = "https://ar-note.hust.online/api/v1";
 
+const color = [
+  "rgb(214, 141, 186)",
+  "rgb(238, 184, 110)",
+  "rgb(120, 196, 150)",
+  "rgb(115, 172, 202)",
+  "rgb(189, 152, 221)",
+  "rgb(255, 255, 255)",
+];
+
 Page({
   data: {
     width: 300,
@@ -60,7 +69,7 @@ Page({
   },
   sendHandler(e) {
     wx.navigateTo({
-        url: "../write/write"+"location_name=" + location_name
+      url: "../write/write" + "location_name=" + location_name,
     });
   },
   methods: {
@@ -75,6 +84,14 @@ Page({
             resolve(res.data.data.post_list);
           },
         });
+
+        // let postList = [];
+        // for (let i = 0; i < 10; i++)
+        //   postList.push({
+        //     content: "HelloWorld 这是什么这是什么",
+        //     user_name: "ligen131",
+        //   });
+        // resolve(postList);
       });
       return instance;
     },
@@ -93,12 +110,11 @@ Page({
             canvas.width = width * dpr * 2;
             canvas.height = height * dpr * 2;
             ctx.scale(dpr * 2, dpr * 2);
-            ctx.font = "10px";
-            ctx.fillStyle = "rgb(255,255,255)";
+            ctx.font = "8px";
+            ctx.fillStyle = color[Math.floor(Math.random() * 6)];
             ctx.fillRect(0, 0, 150, 150);
 
             ctx.fillStyle = "rgb(0,0,0)";
-            // ctx.fillText(item.content, 40, 60);
             let maxWidth = 100;
             let line = 0;
             let str = "";
@@ -109,20 +125,20 @@ Page({
                 ctx.fillText(
                   str.substring(0, str.length - 1),
                   42,
-                  50 + line * 12
+                  50 + line * 10
                 );
                 str = "";
                 i--;
                 line++;
               }
             }
-            ctx.fillText(str, 42, 50 + line * 12);
+            ctx.fillText(str, 42, 50 + line * 10);
             ctx.font = "6px";
             let userWidth = ctx.measureText(item.user_name).width;
             ctx.fillText(
               item.user_name,
               42 + maxWidth - userWidth,
-              50 + line * 12 + 30
+              50 + line * 10 + 30
             );
 
             wx.canvasToTempFilePath({
