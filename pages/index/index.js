@@ -23,10 +23,10 @@ Page({
     textureList: [],
     isShowAR: false,
     isShowSendBtn: false,
-    position: "东九",
+    position: "东九教学楼",
   },
   onLoad(e) {
-    if (e.position) {
+    if (e.position && e.position !== "undefined") {
       this.setData({ position: e.position });
     }
 
@@ -69,14 +69,15 @@ Page({
   },
   sendHandler(e) {
     wx.navigateTo({
-      url: "../write/write" 
+      url: "../write/write",
     });
   },
   methods: {
     getPostList: function (that) {
+      console.log(that.data);
       let instance = new Promise((resolve, reject) => {
         wx.request({
-          url: `${url}/post`,
+          url: `${url}/post?location_name=${that.data.position}`,
           method: "GET",
           success: (res) => {
             console.log(res);
