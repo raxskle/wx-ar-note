@@ -69,7 +69,7 @@ Page({
   },
   sendHandler(e) {
     wx.navigateTo({
-      url: "../write/write" + "location_name=" + location_name,
+      url: "../write/write" 
     });
   },
   methods: {

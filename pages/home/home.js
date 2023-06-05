@@ -1,4 +1,7 @@
 // pages/home/home.js
+
+const app = getApp();
+
 Page({
 
     /**
@@ -6,13 +9,55 @@ Page({
      */
     data: {
         toARBtn : "扫码留言",
-        toSquareBtn : "纸条广场"
+        toSquareBtn : "纸条广场",
+        location: ""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        if(!app.globalData.location){
+            wx.showModal({
+                title: '未扫码',
+                content: '请通过扫描二维码进入小程序',
+                showCancel: false,
+                complete: (res) => {
+                    if (res.cancel) {
+                    
+                    }
+                
+                    if (res.confirm) {
+                    
+                    }
+                }
+                })
+        }else{
+            // 已获取地点信息 发送地点标记请求
+            this.setData({location:app.globalData.location});
+            console.log( app.globalData.location);   
+            let token = wx.getStorageSync("token");
+            let openid = wx.getStorageSync("openid");
+
+            wx.request({
+                url: "https://ar-note.hust.online/api/v1" + "/location/scan",
+                method:"POST",
+                header:{
+                    "Authorization": `Bearer ${token}`,
+                },
+                data:{
+                "openid": openid,
+                "location_name": app.globalData.location,
+                },
+                success:(res)=>{
+                    console.log("post scan success",res.data);			
+                },
+                fail: (err) => {
+                    console.log("post scan fail",err);
+                }
+            })
+
+        }
 
     },
 

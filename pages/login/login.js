@@ -1,4 +1,6 @@
 // pages/login/login.js
+const app = getApp();
+
 Page({
 
     /**
@@ -79,6 +81,16 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(query) {
+        console.log("login query:",query);
+        // 获取地点信息
+        const q = decodeURIComponent(query.q) // 获取到二维码原始链接内容
+        // const scancode_time = parseInt(query.scancode_time) // 获取用户扫码时间 UNIX 时间戳
+        let allParam = this.GetWxMiniProgramUrlParam(q);
+        let location = allParam.name;
+        console.log(allParam, location);
+
+        app.globalData.location = location;  
+
         wx.getStorage({
 
             key:'token',
@@ -105,14 +117,7 @@ Page({
                 console.log("err on storage getting token", err);
             }
         })
-        
-        // 获取地点信息
-        const q = decodeURIComponent(query.q) // 获取到二维码原始链接内容
-        // const scancode_time = parseInt(query.scancode_time) // 获取用户扫码时间 UNIX 时间戳
-        let obj = this.GetWxMiniProgramUrlParam(q);
-        let location = obj.location;
-        console.log(location);
-        
+
     },
     GetWxMiniProgramUrlParam (url) {
         let theRequest = {};
