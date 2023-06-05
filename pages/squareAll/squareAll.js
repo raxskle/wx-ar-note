@@ -131,17 +131,16 @@ Page({
     onShareAppMessage() {
 
     },       
-    handle : debounce( (e)=>{
+    handle(e){
         if(e.target.id != ""){
             // console.log(e.target)
             console.log("into detail ",e.target.id)
             // 根据id 进入square具体参数		
             wx.navigateTo({
-                url:"../squareDetail/squareDetail"+"?"+"location="+e.target.id ,
-                "hover-stay-time": 1000
+                url:"../squareDetail/squareDetail"+"?"+"location="+e.target.id
             })
         }
-    }, 1000),
+    }, 
     handleClickBlock(e){
         this.handle(e);
     },
