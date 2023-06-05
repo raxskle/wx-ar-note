@@ -13,8 +13,9 @@ Page({
         location: ""
     },
     toARPage(){
+        const toARPageParam = app.globalData.location ? app.globalData.location : "";
         wx.navigateTo({
-            url:"../index/index" + "?" + "position=" + app.globalData.location 
+            url:"../index/index" + "?" + "position=" + toARPageParam
         })
     },
     toSquareAll(){

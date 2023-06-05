@@ -69,7 +69,10 @@ Page({
                           title: '留言成功',
                         })
                         // 返回ar页
-                        wx.navigateBack();					
+                        setTimeout(()=>{
+                            wx.navigateBack();	
+                        },500)
+                        				
                     },
                     fail: (err) => {
                         console.log("post msg fail",err);

@@ -58,77 +58,7 @@ Page({
 				console.log("get square detail success",res.data);
 				let resList = res.data.data.post_list;
 					
-				// // mock test
-				//  resList = [
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1684121139,
-				// 			"content": "这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言这是一条测试示例留言。",
-				// 			"is_public": true,
-				// 		},
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1683561600,
-				// 			"content": "这是一条示例留言。",
-				// 			"is_public": true,
-				// 		},
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1683561600,
-				// 			"content": "这是一条示例留言。",
-				// 			"is_public": true,
-				// 		},
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1683561600,
-				// 			"content": "这是一条示例留言。",
-				// 			"is_public": true,
-				// 		},
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1683561600,
-				// 			"content": "这是一条示例留言。",
-				// 			"is_public": true,
-				// 		},
-				// 		{
-				// 			"user_id": 1,
-				// 			"openid": "wxid_xxxx",
-				// 			"user_name": "ligen131",
-				// 			"location_id": 1,
-				// 			"location_name": "东九教学楼",
-				// 			"post_id": 1,
-				// 			"time": 1683561600,
-				// 			"content": "这是一条示例留言。",
-				// 			"is_public": true,
-				// 		}
-				// 	];
 
-				// // 
 				
 
 				// 如果大于20条，滑动到底可以再次请求
@@ -162,9 +92,10 @@ Page({
 		
     },
     toARPage(){
-		wx.navigateTo({
-			url: "../index/index"
-		})
+        const toARPageParam = app.globalData.location ? app.globalData.location : "";
+        wx.navigateTo({
+            url:"../index/index" + "?" + "position=" + toARPageParam
+        })
 	},
 
     /**
