@@ -13,6 +13,13 @@
     <xr-asset-load type="gltf" asset-id="gltfModel7" src="/assets/paper.gltf" />
     <xr-asset-load type="gltf" asset-id="gltfModel8" src="/assets/paper.gltf" />
     <xr-asset-load type="gltf" asset-id="gltfModel9" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel10" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel11" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel12" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel13" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel14" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel15" src="/assets/paper.gltf" />
+    <xr-asset-load type="gltf" asset-id="gltfModel16" src="/assets/paper.gltf" />
   </xr-assets>
   <xr-node wx:if="{{loaded}}">
     <xr-ar-tracker mode="Marker" bind:ar-tracker-switch="handleTrackerSwitch" src="/assets/images/patt.png">
@@ -20,7 +27,7 @@
         <xr-gltf id="myGLTF" model="gltfModel" scale="0.15 0.15 0.15" bind:gltf-loaded="handleGLTFLoaded"></xr-gltf>
       </xr-node> -->
       <xr-node wx:for="{{nodeList}}" wx:key="unique" wx:for-index="index" node-id="node{{index}}" position="{{positionList[index]}}">
-        <xr-gltf id="paperGLTF{{index}}" model="gltfModel{{index}}" scale="0.1 0.1 0.1" bind:gltf-loaded="handleGLTFLoaded" cube-shape="autoFit:true" bind:touch-shape="handleTouchModel" bind:drag-shape="handleDragModel"></xr-gltf>
+        <xr-gltf id="paperGLTF{{index}}" model="gltfModel{{index}}" scale="0.08 0.08 0.08" bind:gltf-loaded="handleGLTFLoaded" cube-shape="autoFit:true" bind:touch-shape="handleTouchModel" bind:drag-shape="handleDragModel"></xr-gltf>
       </xr-node>
     </xr-ar-tracker>
   </xr-node>

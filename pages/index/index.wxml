@@ -1,6 +1,6 @@
 <!-- index.wxml -->
 <view class="container">
-  <ar-frame wx:if="{{isShowAR}}" bind:artrack="{{onARTrack}}" disable-scroll id="main-frame" textureList="{{textureList}}" width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{width}}px;height:{{height}}px;" />
+  <ar-frame wx:if="{{isShowAR}}" bind:artrack="{{onARTrack}}" disable-scroll id="main-frame" textureList="{{textureList}}" width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{width}}px; height:{{height}}px;" />
   <view wx:if="{{!isShowAR}}" wx:for="{{20}}" wx:for-index="index" wx:for-item="item" class="canvas-container">
     <canvas type="2d" id="canvas{{index}}"></canvas>
   </view>
@@ -15,6 +15,7 @@
     </view>
   </view>
   <view wx:if="{{isShowSendBtn}}" class="btn-send" bindtap="sendHandler">
+    <image class="btn-img" src="/assets/images/btn.png"></image>
     <text>我要留言</text>
   </view>
 </view>
