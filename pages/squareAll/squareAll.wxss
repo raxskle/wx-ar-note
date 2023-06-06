@@ -24,8 +24,12 @@
 .box {
     width: 100vw;
     box-sizing: border-box;
-    padding: 11vw 4vw 0;
+    padding: 7vw 4vw 0;
     position: relative;
+}
+
+.box:first-child {
+    padding-top: 11vw;
 }
 
 .boxtitle {
@@ -41,12 +45,19 @@
     width: 100%;
 }
 
+.img-tongji,
+.img-cse {
+    width: 68vw;
+    margin: auto;
+    display: block;
+}
+
 .canva {
     position: relative;
 }
 
 .btmMargin {
-    margin-bottom: 60vw;
+    margin-bottom: 20vw;
 }
 
 .block {
@@ -199,7 +210,7 @@
     position: absolute;
     width: 10vw;
     height: 10vw;
-    background-color: blue;
+    background-color: red;
 }
 
 /* 西区 */
@@ -253,12 +264,16 @@
 }
 
 /* 其他校区 */
-.tongjixiaoqu,
+.tongjixiaoqu {
+    width: 31vw;
+    height: 26vw;
+    left: 33vw;
+    top: 22vw;
+}
+
 .wanganxiaoqu {
-    width: 50vw;
-    height: 50vw;
-    left: 20vw;
-    top: 10vw;
-    font-size: 28px;
-    /* font-weight: 600; */
+    width: 32vw;
+    height: 29vw;
+    left: 36vw;
+    top: 42vw;
 }
