@@ -116,16 +116,17 @@ Page({
      */
     onShareAppMessage() {},
     handle(e) {
-        if (e.target.id != "") {
+        const location = e.target.dataset.loc
+        if (location != "") {
             // console.log(e.target)
-            console.log("into detail ", e.target.id);
+            console.log("into detail ", location);
             // 根据id 进入square具体参数
             wx.navigateTo({
                 url:
                     "../squareDetail/squareDetail" +
                     "?" +
                     "location=" +
-                    e.target.id,
+                    location,
             });
         }
     },

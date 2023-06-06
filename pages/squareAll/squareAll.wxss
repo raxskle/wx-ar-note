@@ -124,52 +124,80 @@
 
 /* 中区 */
 .zhutushuguan {
-    width: 32vw;
-    height: 32vw;
-    left: 5vw;
-    top: 12vw;
+    width: 24vw;
+    height: 13vw;
+    left: 7vw;
+    top: 37vw;
+}
+
+.zhutushuguan .extra-box {
+    top: 13vw;
+    left: 6vw;
+    width: 11vw;
+    height: 4vw;
 }
 
 .zhongcao {
-    width: 34vw;
-    height: 34vw;
-    left: 9vw;
-    top: 43vw;
+    width: 11vw;
+    height: 17vw;
+    left: 26vw;
+    top: 49vw;
 }
+
+.zhongcao .extra-box {
+    top: 17vw;
+    left: 2vw;
+    width: 7.9vw;
+    height: 4.1vw;
+}
+
 .yuyuanshitang {
-    width: 28vw;
-    height: 28vw;
-    left: 40vw;
-    top: 6vw;
+    width: 22vw;
+    height: 14vw;
+    left: 37vw;
+    top: 19vw;
 }
 
 .dongqusushe {
-    width: 28vw;
-    height: 28vw;
-    left: 29vw;
-    top: 27vw;
+    width: 23vw;
+    height: 15vw;
+    left: 40vw;
+    top: 44vw;
 }
+
 .guangti {
-    width: 20vw;
-    height: 20vw;
-    left: 31vw;
+    width: 19vw;
+    height: 15vw;
+    left: 36vw;
     top: 66vw;
 }
+
 .dongyishitang {
-    width: 27vw;
-    height: 27vw;
-    left: 57vw;
-    top: 27vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 19vw;
+    height: 12vw;
+    left: 59vw;
+    top: 32vw;
 }
+
+.dongyishitang .extra-box {
+    top: 12vw;
+    left: 4.6vw;
+    width: 11vw;
+    height: 4.4vw;
+}
+
 .qinyuangongyu {
-    width: 34vw;
-    height: 34vw;
-    left: 45vw;
-    top: 47vw;
+    width: 24vw;
+    height: 18vw;
+    left: 58vw;
+    top: 71vw;
+}
+
+.extra-box {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background-color: blue;
 }
 
 /* 西区 */

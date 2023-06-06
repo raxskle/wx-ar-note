@@ -4,13 +4,13 @@
 		<view class="box">
 			<text class="boxtitle title1">主校区东</text>
 			<view class="canva">
-				<view class="{{'block '+' dongjiu ' + blockColors['东九教学楼']}}" id="东九教学楼">东九</view>
-				<view class="{{'block '+' yunyuangongyu ' + blockColors['韵苑宿舍']}}" id="韵苑宿舍">韵苑公寓</view>
-				<view class="{{'block '+' dongcao ' + blockColors['东边操场']}}" id="东边操场">东操</view>
-				<view class="{{'block '+' gongxunzhongxin ' + blockColors['工训中心']}}" id="工训中心">工训中心</view>
-				<view class="{{'block '+' cbd ' + blockColors['东边cbd']}}" id="东边cbd">cbd</view>
-				<view class="{{'block '+' dongtushuguan ' + blockColors['东图书馆']}}" id="东图书馆">东图书馆</view>
-				<view class="{{'block '+' yunjiu ' + blockColors['韵苑食堂']}}" id="韵苑食堂">韵酒</view>
+				<view class="{{'block '+' dongjiu ' + blockColors['东九教学楼']}}" data-loc="东九教学楼">东九</view>
+				<view class="{{'block '+' yunyuangongyu ' + blockColors['韵苑宿舍']}}" data-loc="韵苑宿舍">韵苑公寓</view>
+				<view class="{{'block '+' dongcao ' + blockColors['东边操场']}}" data-loc="东边操场">东操</view>
+				<view class="{{'block '+' gongxunzhongxin ' + blockColors['工训中心']}}" data-loc="工训中心">工训中心</view>
+				<view class="{{'block '+' cbd ' + blockColors['东边cbd']}}" data-loc="东边cbd">cbd</view>
+				<view class="{{'block '+' dongtushuguan ' + blockColors['东图书馆']}}" data-loc="东图书馆">东图书馆</view>
+				<view class="{{'block '+' yunjiu ' + blockColors['韵苑食堂']}}" data-loc="韵苑食堂">韵酒</view>
 				<image mode="widthFix" class="img-main-east" src="../../assets/images/main-east.png" alt="主校区东"></image>
 			</view>
 		</view>
@@ -18,31 +18,38 @@
 		<view class="box">
 			<text class="boxtitle">主校区中</text>
 			<view class="canva">
-				<view class="{{'block '+' zhutushuguan ' + blockColors['主图书馆']}}" id="主图书馆">主图书馆</view>
-				<view class="{{'block '+' zhongcao ' + blockColors['中间操场']}}" id="中间操场">中操</view>
-				<view class="{{'block '+' yuyuanshitang ' + blockColors['喻园食堂']}}" id="喻园食堂">喻园食堂</view>
-				<view class="{{'block '+' dongqusushe ' + blockColors['东区宿舍']}}" id="东区宿舍">东区宿舍</view>
-				<view class="{{'block '+' guangti ' + blockColors['光谷体育馆']}}" id="光谷体育馆">光体</view>
-				<view class="{{'block '+' dongyishitang ' + blockColors['东一食堂']}}" id="东一食堂">
-					<view>东一</view>
-					<view>食堂</view>
+				<view class="{{'block '+' zhutushuguan ' + blockColors['主图书馆']}}" data-loc="主图书馆">
+					<div class="extra-box" data-loc="主图书馆"></div>
+					主图书馆
 				</view>
-				<view class="{{'block '+' qinyuangongyu ' + blockColors['沁苑宿舍']}}" id="沁苑宿舍">沁苑公寓</view>
+				<view class="{{'block '+' zhongcao ' + blockColors['中间操场']}}" data-loc="中间操场">
+					<div class="extra-box" data-loc="中间操场"></div>
+					中操
+				</view>
+				<view class="{{'block '+' yuyuanshitang ' + blockColors['喻园食堂']}}" data-loc="喻园食堂">喻园食堂</view>
+				<view class="{{'block '+' dongqusushe ' + blockColors['东区宿舍']}}" data-loc="东区宿舍">东区宿舍</view>
+				<view class="{{'block '+' guangti ' + blockColors['光谷体育馆']}}" data-loc="光谷体育馆">光体</view>
+				<view class="{{'block '+' dongyishitang ' + blockColors['东一食堂']}}" data-loc="东一食堂">
+					<div class="extra-box" data-loc="东一食堂"></div>
+					东一食堂
+				</view>
+				<view class="{{'block '+' qinyuangongyu ' + blockColors['沁苑宿舍']}}" data-loc="沁苑宿舍">沁苑公寓</view>
+				<image mode="widthFix" class="img-main-east" src="../../assets/images/main-mid.png" alt="主校区中"></image>
 			</view>
 		</view>
 		<view class="box">
 			<text class="boxtitle">主校区西</text>
 			<view class="canva">
-				<view class="{{'block '+' xiershitang ' + blockColors['西二食堂']}}" id="西二食堂">
+				<view class="{{'block '+' xiershitang ' + blockColors['西二食堂']}}" data-loc="西二食堂">
 					<view>西二</view>
 					<view>食堂</view>
 				</view>
-				<view class="{{'block '+' zisonggongyu ' + blockColors['紫菘宿舍']}}" id="紫菘宿舍">紫菘公寓</view>
-				<view class="{{'block '+' xiyishitang ' + blockColors['西一食堂']}}" id="西一食堂">西一食堂</view>
-				<view class="{{'block '+' xicao ' + blockColors['西边操场']}}" id="西边操场">西操</view>
-				<view class="{{'block '+' xishierlou ' + blockColors['西十二教学楼']}}" id="西十二教学楼">西十二楼</view>
-				<view class="{{'block '+' baijingyuan ' + blockColors['百景园']}}" id="百景园">百景园</view>
-				<view class="{{'block '+' xiqusushe ' + blockColors['西区宿舍']}}" id="西区宿舍">
+				<view class="{{'block '+' zisonggongyu ' + blockColors['紫菘宿舍']}}" data-loc="紫菘宿舍">紫菘公寓</view>
+				<view class="{{'block '+' xiyishitang ' + blockColors['西一食堂']}}" data-loc="西一食堂">西一食堂</view>
+				<view class="{{'block '+' xicao ' + blockColors['西边操场']}}" data-loc="西边操场">西操</view>
+				<view class="{{'block '+' xishierlou ' + blockColors['西十二教学楼']}}" data-loc="西十二教学楼">西十二楼</view>
+				<view class="{{'block '+' baijingyuan ' + blockColors['百景园']}}" data-loc="百景园">百景园</view>
+				<view class="{{'block '+' xiqusushe ' + blockColors['西区宿舍']}}" data-loc="西区宿舍">
 					<view>西区</view>
 					<view>宿舍</view>
 				</view>
@@ -54,14 +61,14 @@
 			<text class="boxtitle">同济校区</text>
 
 			<view class="canva2">
-				<view class="{{'block '+' tongjixiaoqu ' + blockColors['同济校区']}}" id="同济校区">同济校区</view>
+				<view class="{{'block '+' tongjixiaoqu ' + blockColors['同济校区']}}" data-loc="同济校区">同济校区</view>
 			</view>
 		</view>
 		<view class="box">
 			<text class="boxtitle">网安校区</text>
 
 			<view class="canva2 btmMargin">
-				<view class="{{'block '+' wanganxiaoqu ' + blockColors['网安校区']}}" id="网安校区">网安校区</view>
+				<view class="{{'block '+' wanganxiaoqu ' + blockColors['网安校区']}}" data-loc="网安校区">网安校区</view>
 			</view>
 		</view>
 	</view>
