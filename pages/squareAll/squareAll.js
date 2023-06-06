@@ -117,7 +117,7 @@ Page({
     onShareAppMessage() {},
     handle(e) {
         const location = e.target.dataset.loc
-        if (location != "") {
+        if (location) {
             // console.log(e.target)
             console.log("into detail ", location);
             // 根据id 进入square具体参数
