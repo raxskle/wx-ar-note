@@ -1,19 +1,8 @@
 <!--pages/squareAll/squareAll.wxml-->
 <view class="container">
 	<view class="squareWrap" bindtap="handleClickBlock">
-		<view class="bgleaveImgShareImg bgleave leave1"></view>
-		<view class="bgleaveImgShareImg bgleave leave2"></view>
-		<view class="bgleaveImgShareImg bgleave leave3"></view>
-		<view class="bgleaveImgShareImg bgleave leave4"></view>
-		<view class="bgleaveImgShareImg bgleave leave5"></view>
-		<view class="bgleaveImgShareImg bgleave leave6"></view>
-		<view class="bgleaveImgShareImg bgleave leave7"></view>
-		<view class="bgleaveImgShareImg bgleave2 leave8"></view>
-		<view class="bgleaveImgShareImg bgleave3 leave9"></view>
-		<view class="bgleaveImgShareImg bgleave4 leave10"></view>
-
-		<view class="box box1">
-			<text class="boxtitle">主校区东</text>
+		<view class="box">
+			<text class="boxtitle title1">主校区东</text>
 			<view class="canva">
 				<view class=" {{' block '+' dongjiu ' + blockColors['东九教学楼']}}" id="东九教学楼">东九</view>
 				<view class=" {{' block '+' yunyuangongyu ' + blockColors['韵苑宿舍']}}" id="韵苑宿舍">韵苑公寓</view>
@@ -23,10 +12,11 @@
 				<view class=" {{' block '+' dongtushuguan ' + blockColors['东图书馆']}}" id="东图书馆">东图书馆</view>
 				<view class=" {{' block '+' yunjiu ' + blockColors['韵苑食堂']}}" id="韵苑食堂">韵酒</view>
 			</view>
+			<image class="img-main-east" src="../../assets/images/main-east.png" alt="主校区东"></image>
 		</view>
 
 
-		<view class="box box2">
+		<view class="box">
 			<text class="boxtitle">主校区中</text>
 			<view class="canva">
 				<view class=" {{' block '+' zhutushuguan ' + blockColors['主图书馆']}}" id="主图书馆">主图书馆</view>
@@ -41,7 +31,7 @@
 				<view class=" {{' block '+' qinyuangongyu ' + blockColors['沁苑宿舍']}}" id="沁苑宿舍">沁苑公寓</view>
 			</view>
 		</view>
-		<view class="box box3">
+		<view class="box">
 			<text class="boxtitle">主校区西</text>
 			<view class="canva">
 				<view class=" {{' block '+' xiershitang ' + blockColors['西二食堂']}}" id="西二食堂">
@@ -61,12 +51,16 @@
 			</view>
 
 		</view>
-		<view class="box box4">
+		<view class="box">
+			<text class="boxtitle">同济校区</text>
+			
 			<view class="canva2">
 				<view class=" {{' block '+' tongjixiaoqu ' + blockColors['同济校区']}}" id="同济校区">同济校区</view>
 			</view>
 		</view>
-		<view class="box box5">
+		<view class="box">
+			<text class="boxtitle">网安校区</text>
+			
 			<view class="canva2 btmMargin">
 				<view class=" {{' block '+' wanganxiaoqu ' + blockColors['网安校区']}}" id="网安校区">网安校区</view>
 			</view>
