@@ -34,15 +34,15 @@
 					东一食堂
 				</view>
 				<view class="{{'block '+' qinyuangongyu ' + blockColors['沁苑宿舍']}}" data-loc="沁苑宿舍">沁苑公寓</view>
-				<image mode="widthFix" class="img-main-east" src="../../assets/images/main-mid.png" alt="主校区中"></image>
+				<image mode="widthFix" class="img-main-mid" src="../../assets/images/main-mid.png" alt="主校区中"></image>
 			</view>
 		</view>
+
 		<view class="box">
 			<text class="boxtitle">主校区西</text>
 			<view class="canva">
 				<view class="{{'block '+' xiershitang ' + blockColors['西二食堂']}}" data-loc="西二食堂">
-					<view>西二</view>
-					<view>食堂</view>
+					西二食堂
 				</view>
 				<view class="{{'block '+' zisonggongyu ' + blockColors['紫菘宿舍']}}" data-loc="紫菘宿舍">紫菘公寓</view>
 				<view class="{{'block '+' xiyishitang ' + blockColors['西一食堂']}}" data-loc="西一食堂">西一食堂</view>
@@ -50,10 +50,10 @@
 				<view class="{{'block '+' xishierlou ' + blockColors['西十二教学楼']}}" data-loc="西十二教学楼">西十二楼</view>
 				<view class="{{'block '+' baijingyuan ' + blockColors['百景园']}}" data-loc="百景园">百景园</view>
 				<view class="{{'block '+' xiqusushe ' + blockColors['西区宿舍']}}" data-loc="西区宿舍">
-					<view>西区</view>
-					<view>宿舍</view>
+					西区宿舍
 				</view>
 
+				<image mode="widthFix" class="img-main-west" src="../../assets/images/main-west.png" alt="主校区西"></image>
 			</view>
 
 		</view>

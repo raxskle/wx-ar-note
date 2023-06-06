@@ -35,7 +35,9 @@
     margin-left: 38px;
 }
 
-.img-main-east {
+.img-main-east,
+.img-main-west,
+.img-main-mid {
     width: 100%;
 }
 
@@ -203,56 +205,54 @@
 /* 西区 */
 .xiershitang {
     width: 24vw;
-    height: 24vw;
-    left: 10vw;
-    top: 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.zisonggongyu {
-    width: 32vw;
-    height: 32vw;
-    left: 2vw;
-    top: 40vw;
-}
-.xiyishitang {
-    width: 28vw;
-    height: 28vw;
-    left: 38vw;
-    top: 1vw;
-}
-.xicao {
-    width: 35vw;
-    height: 35vw;
-    left: 30vw;
-    top: 26vw;
-}
-.xishierlou {
-    width: 30vw;
-    height: 30vw;
-    left: 43vw;
-    top: 56vw;
-}
-.baijingyuan {
-    width: 28vw;
-    height: 28vw;
-    left: 58vw;
-    top: 15vw;
-}
-.xiqusushe {
-    width: 28vw;
-    height: 28vw;
-    left: 65vw;
-    top: 38vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 19vw;
+    left: 7vw;
+    top: 36vw;
 }
 
-/*  */
+.zisonggongyu {
+    width: 29vw;
+    height: 20vw;
+    left: 19vw;
+    top: 66vw;
+}
+
+.xiyishitang {
+    width: 22vw;
+    height: 19vw;
+    left: 35vw;
+    top: 16vw;
+}
+
+.xicao {
+    width: 13vw;
+    height: 24vw;
+    left: 40vw;
+    top: 42vw;
+}
+
+.xishierlou {
+    width: 26vw;
+    height: 21vw;
+    left: 56vw;
+    top: 76vw;
+}
+
+.baijingyuan {
+    width: 21vw;
+    height: 19vw;
+    left: 63vw;
+    top: 38vw;
+}
+
+.xiqusushe {
+    width: 26vw;
+    height: 17vw;
+    left: 58vw;
+    top: 58vw;
+}
+
+/* 其他校区 */
 .tongjixiaoqu,
 .wanganxiaoqu {
     width: 50vw;
