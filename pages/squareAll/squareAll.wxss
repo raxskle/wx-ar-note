@@ -24,7 +24,8 @@
 .box {
     width: 100vw;
     box-sizing: border-box;
-    padding: 50px 16px 0;
+    padding: 11vw 4vw 0;
+    position: relative;
 }
 
 .boxtitle {
@@ -34,20 +35,12 @@
     margin-left: 38px;
 }
 
+.img-main-east {
+    width: 100%;
+}
 
 .canva {
     position: relative;
-    /* border: 1px red solid; */
-    width: 90vw;
-    height: 90vw;
-    background-color: transparent;
-}
-
-.canva2 {
-    position: relative;
-    /* border: 1px red solid; */
-    width: 90vw;
-    height: 60vw;
 }
 
 .btmMargin {
@@ -57,6 +50,9 @@
 .block {
     position: absolute;
     box-sizing: border-box;
+    color: pink;
+    background-color: red;
+    opacity: 0.3;
 }
 /* 
 .unvisitedColor {
@@ -78,62 +74,52 @@
 }
 
 .dongjiu {
-    width: 30vw;
-    height: 30vw;
-    left: 2vw;
-    top: 30vw;
-    writing-mode: vertical-rl;
-    z-index: 2;
-    background-color: transparent;
-    transform: rotate(-0.75deg);
+    width: 26vw;
+    height: 19vw;
+    left: 3vw;
+    top: 41vw;
 }
 
 .yunyuangongyu {
-    width: 38vw;
-    height: 38vw;
-    left: 33vw;
-    top: 7vw;
-    transform: rotate(5.19deg);
+    width: 24vw;
+    height: 16vw;
+    left: 36vw;
+    top: 17vw;
 }
 
 .dongcao {
-    width: 30vw;
-    height: 30vw;
-    left: 29vw;
-    top: 39vw;
-    writing-mode: vertical-rl;
-    transform: rotate(-11.49deg);
+    width: 13vw;
+    height: 24vw;
+    left: 35vw;
+    top: 48vw;
 }
 
 .gongxunzhongxin {
-    width: 32vw;
-    height: 32vw;
-    left: 56vw;
-    top: 33vw;
-    transform: rotate(14.6deg);
+    width: 22vw;
+    height: 16vw;
+    left: 55vw;
+    top: 35vw;
 }
 
 .cbd {
-    width: 26vw;
-    height: 26vw;
-    left: 20vw;
-    top: 59vw;
-    transform: rotate(-12.77deg);
+    width: 18vw;
+    height: 16vw;
+    left: 26.2vw;
+    top: 77vw;
 }
+
 .dongtushuguan {
-    width: 30vw;
-    height: 30vw;
+    width: 23vw;
+    height: 18vw;
     left: 48vw;
-    top: 60vw;
-    transform: rotate(14.6deg);
+    top: 68vw;
 }
+
 .yunjiu {
-    width: 20vw;
-    height: 20vw;
-    left: 15vw;
-    top: 15vw;
-    writing-mode: vertical-rl;
-    transform: rotate(-13.9deg);
+    width: 24vw;
+    height: 16vw;
+    left: 6vw;
+    top: 22vw;
 }
 
 /* 中区 */
@@ -142,7 +128,6 @@
     height: 32vw;
     left: 5vw;
     top: 12vw;
-    transform: rotate(-3.77deg);
 }
 
 .zhongcao {
@@ -150,15 +135,12 @@
     height: 34vw;
     left: 9vw;
     top: 43vw;
-    writing-mode: vertical-rl;
-    transform: rotate(-8.26deg);
 }
 .yuyuanshitang {
     width: 28vw;
     height: 28vw;
     left: 40vw;
     top: 6vw;
-    transform: rotate(-0.75deg);
 }
 
 .dongqusushe {
@@ -166,16 +148,12 @@
     height: 28vw;
     left: 29vw;
     top: 27vw;
-    z-index: 2;
-    transform: rotate(-0.75deg);
 }
 .guangti {
     width: 20vw;
     height: 20vw;
     left: 31vw;
     top: 66vw;
-    writing-mode: vertical-rl;
-    transform: rotate(-13.9deg);
 }
 .dongyishitang {
     width: 27vw;
@@ -186,14 +164,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotate(13.93deg);
 }
 .qinyuangongyu {
     width: 34vw;
     height: 34vw;
     left: 45vw;
     top: 47vw;
-    transform: rotate(13.56deg);
 }
 
 /* 西区 */
@@ -206,42 +182,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotate(15.35deg);
 }
 .zisonggongyu {
     width: 32vw;
     height: 32vw;
     left: 2vw;
     top: 40vw;
-    transform: rotate(-8.26deg);
 }
 .xiyishitang {
     width: 28vw;
     height: 28vw;
     left: 38vw;
     top: 1vw;
-    transform: rotate(-0.75deg);
 }
 .xicao {
     width: 35vw;
     height: 35vw;
     left: 30vw;
     top: 26vw;
-    transform: rotate(-0.75deg);
 }
 .xishierlou {
     width: 30vw;
     height: 30vw;
     left: 43vw;
     top: 56vw;
-    transform: rotate(-3.77deg);
 }
 .baijingyuan {
     width: 28vw;
     height: 28vw;
     left: 58vw;
     top: 15vw;
-    transform: rotate(13.93deg);
 }
 .xiqusushe {
     width: 28vw;
@@ -252,7 +222,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotate(1.72deg);
 }
 
 /*  */
