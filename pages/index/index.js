@@ -49,7 +49,7 @@ Page({
         textureList: [],
         isShowAR: false,
         isShowSendBtn: false,
-        position: "东九教学楼",
+        position: "",
     },
     onLoad(e) {
         if (e.position && e.position !== "undefined") {
@@ -128,6 +128,11 @@ Page({
     sendHandler(e) {
         wx.navigateTo({
             url: "../write/write",
+        });
+    },
+    shareHandler(e) {
+        wx.navigateTo({
+            url: "../share/share",
         });
     },
     methods: {
