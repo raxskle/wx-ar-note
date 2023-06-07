@@ -7,7 +7,7 @@
   <view wx:if="{{isShowAR}}" class="side-bar">
     <view class="side-item">
       <image class="img-position" src="/assets/images/position.png" />
-      <text id="position-text">{{position}}</text>
+      <text id="position-text">{{position === "" ? "  " : position}}</text>
     </view>
     <view class="side-item" bindtap="shareHandler">
       <image class="img-share" src="/assets/images/share.png" />

@@ -41,6 +41,7 @@
 
 .side-item > text {
   font-size: 16px;
+  white-space: pre;
 }
 
 .img-position {

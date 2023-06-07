@@ -101,11 +101,13 @@ Component({
         handleTouchModel: function ({ detail }) {
             const el = detail.value.target;
             console.log(el);
-            console.log(this.data.scene.getNodeById(`node${el.id[9]}`));
+            console.log(
+                this.data.scene.getNodeById(`node${el.id.substring(9)}`)
+            );
         },
         handleDragModel: function ({ detail }) {
             const el = detail.value.target;
-            let node = this.data.scene.getNodeById(`node${el.id[9]}`);
+            let node = this.data.scene.getNodeById(`node${el.id.substring(9)}`);
             node.position.x += detail.value.deltaX / 500;
             node.position.z += detail.value.deltaY / 500;
         },
