@@ -10,7 +10,7 @@
 						</view>
 						<view  class="toSquarePage home-btn" bind:tap="toSquareAll">
                             <image class="btn-img" src="/assets/images/btn.png"></image>
-                            <text class="homt-btn-text">纸条广场</text>
+                            <text class="home-btn-text">纸条广场</text>
 						</view>
 				</view>
 				

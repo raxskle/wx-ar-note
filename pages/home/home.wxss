@@ -84,7 +84,7 @@
     height: 100%;
 }
 
-.homt-btn-text{
+.home-btn-text{
     position: absolute;
     color: white;
 }

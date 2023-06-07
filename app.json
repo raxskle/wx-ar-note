@@ -5,7 +5,7 @@
         "pages/squareAll/squareAll",
         "pages/index/index",
         "pages/home/home",
-        "pages/write/write",
+        "pages/write/write",  
         "pages/share/share"
     ],
     "window": {

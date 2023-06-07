@@ -2,15 +2,19 @@
 <view class="container">
     <view class="inputWrap">
         <view class="inputBox">
+            <image class="write-box-bg" src="/assets/images/write-box-bg.png"></image>
             <view class="messageWrap">
-                <textarea class="messageInput" value="{{messageValue}}" bindinput="onChangeMessageValue" placeholder="请输入留言内容" 	 />
+                <textarea class="messageInput" value="{{messageValue}}" bindinput="onChangeMessageValue" placeholder="请输入留言" 	 />
             </view>
             <view class="idBox">
-                <input class="idInput" value="{{idValue}}" bindinput="onChangeIdValue" placeholder="请输入你的昵称" 	maxlength="12"  />
+                <input class="idInput" value="{{idValue}}" bindinput="onChangeIdValue" placeholder="请输入昵称" 	maxlength="12"  />
             </view>
         </view>
         <view class="confirmPost">
-            <button bind:tap="sendMessage">确认发布</button>
+            <view  bind:tap="sendMessage" class="write-btn">
+                <image class="btn-img" src="/assets/images/btn.png"></image>
+                <text class="write-btn-text">确认发布</text>
+            </view>
         </view>
     </view>
     
