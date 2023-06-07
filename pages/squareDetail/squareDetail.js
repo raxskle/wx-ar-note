@@ -137,9 +137,13 @@ Page({
 		})
     },
     toARPage(){
+        // const toARPageParam = app.globalData.location ? app.globalData.location : "";
+        // wx.navigateTo({
+        //     url:"../index/index" + "?" + "position=" + toARPageParam
+        // })
         const toARPageParam = app.globalData.location ? app.globalData.location : "";
-        wx.navigateTo({
-            url:"../index/index" + "?" + "position=" + toARPageParam
+        wx.redirectTo({
+          url: "../index/index" + "?" + "position=" + toARPageParam,
         })
 	},
 
