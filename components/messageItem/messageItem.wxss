@@ -58,6 +58,7 @@
     position: absolute;
     left: 10vw;
     top: 4%;
+    padding: 2vw;
 }
 
 

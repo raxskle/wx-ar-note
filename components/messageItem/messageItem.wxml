@@ -7,7 +7,7 @@
 
         <view class="locationLabel">
             <image class="msg-location-img" src="/assets/images/msg-item-bg4.png"></image>
-            <image class="locationIcon"  src="../../assets/locationicon.png"></image>
+            <image class="locationIcon"  src="../../assets/location-icon.png"></image>
             {{locationLabel}}
         </view>
 
