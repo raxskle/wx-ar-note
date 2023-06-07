@@ -2,7 +2,9 @@
 <view class="container">
 	<view class="squareWrap" bindtap="handleClickBlock">
 		<view class="box">
-			<text class="boxtitle title1">主校区东</text>
+            <!-- <text class="boxtitle title1">主校区东</text> -->
+            <image class="title-img" mode="aspectFit" src="https://h5.hust.online/ar-note/square-title-1.png"></image>
+
 			<view class="canva">
 				<view class="{{'block '+' dongjiu ' + blockColors['东九教学楼']}}" data-loc="东九教学楼">东九</view>
 				<view class="{{'block '+' yunyuangongyu ' + blockColors['韵苑宿舍']}}" data-loc="韵苑宿舍">韵苑公寓</view>
@@ -16,7 +18,8 @@
 		</view>
 
 		<view class="box">
-			<text class="boxtitle">主校区中</text>
+            <!-- <text class="boxtitle">主校区中</text> -->
+            <image class="title-img" mode="aspectFit" src="https://h5.hust.online/ar-note/square-title-2.png"></image>
 			<view class="canva">
 				<view class="{{'block '+' zhutushuguan ' + blockColors['主图书馆']}}" data-loc="主图书馆">
 					<div class="extra-box" data-loc="主图书馆"></div>
@@ -39,7 +42,8 @@
 		</view>
 
 		<view class="box">
-			<text class="boxtitle">主校区西</text>
+            <!-- <text class="boxtitle">主校区西</text> -->
+            <image class="title-img" mode="aspectFit" src="https://h5.hust.online/ar-note/square-title-3.png"></image>
 			<view class="canva">
 				<view class="{{'block '+' xiershitang ' + blockColors['西二食堂']}}" data-loc="西二食堂">
 					西二食堂
@@ -58,7 +62,8 @@
 
 		</view>
 		<view class="box">
-			<text class="boxtitle">同济校区</text>
+            <!-- <text class="boxtitle">同济校区</text> -->
+            <image class="title-img2" mode="aspectFit" src="https://h5.hust.online/ar-note/square-title-4.png"></image>
 
 			<view class="canva">
 				<view class="{{'block '+' tongjixiaoqu ' + blockColors['同济校区']}}" data-loc="同济校区">同济校区</view>
@@ -66,7 +71,8 @@
 			</view>
 		</view>
 		<view class="box">
-			<text class="boxtitle">网安校区</text>
+            <!-- <text class="boxtitle">网安校区</text> -->
+            <image class="title-img2" mode="aspectFit" src="https://h5.hust.online/ar-note/square-title-5.png"></image>
 
 			<view class="canva2 btmMargin">
 				<view class="{{'block '+' wanganxiaoqu ' + blockColors['网安校区']}}" data-loc="网安校区">网安校区</view>

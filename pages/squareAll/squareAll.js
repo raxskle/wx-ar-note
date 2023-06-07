@@ -1,4 +1,3 @@
-const { debounce } = require("../../utils/util");
 
 // pages/squareAll/squareAll.js
 Page({

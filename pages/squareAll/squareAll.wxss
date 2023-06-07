@@ -264,3 +264,15 @@
     left: 36vw;
     top: 42vw;
 }
+
+.title-img{
+    height: 6vh;
+    width: 40vw;
+    margin-top: 2vh;
+}
+
+.title-img2{
+    height: 5vh;
+    width: 48vw;
+    margin-top: 2vh;
+}
