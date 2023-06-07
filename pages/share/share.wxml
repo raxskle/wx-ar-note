@@ -10,7 +10,7 @@
                         <image class="btn-img" src="/assets/images/btn-grey.png"></image>
                         <text class="home-btn-text">取消</text>
                     </view>
-                    <view  class="toSquarePage home-btn" bind:tap="backToAR">
+                    <view  class="toSquarePage home-btn" bind:tap="onTapShare">
                         <image class="btn-img" src="/assets/images/btn.png"></image>
                         <text class="home-btn-text">保存到相册</text>
                     </view>                    

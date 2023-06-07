@@ -13,7 +13,29 @@ Page({
         wx.navigateTo({
             url:"../index/index" + "?" + "position=" + toARPageParam
         })
-	},
+    },
+    onTapShare(){
+        // 做埋点
+        let token = wx.getStorageSync("token");
+        let openid = wx.getStorageSync("openid");
+        wx.request({
+            url: "https://ar-note.hust.online/api/v1" + "/share",
+            method:"POST",
+            header:{
+                "Authorization": `Bearer ${token}`,
+            },
+            data:{
+            "openid": openid,
+            "location_name": app.globalData.location,
+            },
+            success:(res)=>{
+                console.log("post share success",res.data);
+            },
+            fail: (err) => {
+                console.log("post share fail",err);
+            }
+        })
+    },
 
     /**
      * 生命周期函数--监听页面加载
