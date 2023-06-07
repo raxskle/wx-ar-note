@@ -16,11 +16,29 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(data) {
-		// // 从ar页 拿到locationName
-		// if(data.location_name){
-        //     this.setData({locationName:data.location_name});
-		// }
-		// console.log("write in location: ",data);
+        // 请求得到默认名字
+        let token = wx.getStorageSync("token");
+        let openid = wx.getStorageSync("openid");
+        wx.request({
+            url: "https://ar-note.hust.online/api/v1" + "/user",
+            method:"GET",
+            header:{
+                "Authorization": `Bearer ${token}`,
+            },
+            data:{
+            "openid": openid,
+            },
+            success:(res)=>{
+                console.log("write get 默认昵称",res.data.data.user_name);
+                this.setData({idValue: res.data.data.user_name});          
+            },
+            fail: (err) => {
+
+            }
+        })
+
+
+
     },
 	//  发送留言
 	sendMessage(){
@@ -44,7 +62,7 @@ Page({
             // 已扫码
             // 需要 openid(storage拿到) locationName (onload拿到)
             //      content(messageValue) id(idValue)
-            if(this.data.messageValue.trim()!="" && this.data.idValue.trim()!="" && this.data.messageValue.trim().length<=150){
+            if(this.data.messageValue.trim()!="" && this.data.idValue.trim()!="" && this.data.messageValue.trim().length<=100){
                 // send here
                 let token = wx.getStorageSync("token");
                 let openid = wx.getStorageSync("openid");
@@ -71,7 +89,11 @@ Page({
                         })
                         // 返回ar页
                         setTimeout(()=>{
-                            wx.navigateBack();	
+                            // wx.navigateBack();	
+                            const toARPageParam = app.globalData.location ? app.globalData.location : "";
+                            wx.redirectTo({
+                              url: "../index/index" + "?" + "position=" + toARPageParam,
+                            })
                         },500)
                         				
                     },
