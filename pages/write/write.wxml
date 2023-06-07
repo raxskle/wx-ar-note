@@ -2,7 +2,7 @@
 <view class="container">
     <view class="inputWrap">
         <view class="inputBox">
-            <image class="write-box-bg" src="/assets/images/write-box-bg.png"></image>
+            <image class="write-box-bg" src="https://h5.hust.online/ar-note/write-box-bg.png"></image>
             <view class="messageWrap">
                 <textarea class="messageInput" value="{{messageValue}}" bindinput="onChangeMessageValue" placeholder="请输入留言" 	 />
             </view>

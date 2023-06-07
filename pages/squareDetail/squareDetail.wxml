@@ -1,5 +1,5 @@
 <!--pages/squareDetail/squareDetail.wxml-->
-<image class="bgimg" src="https://h5.hust.online/ar-note/msg-detail-bg.jpg"  mode="aspectFill"></image>
+<!-- <image class="bgimg" src="https://h5.hust.online/ar-note/msg-detail-bg.jpg"  mode="aspectFill"></image> -->
 	<view class="container">
 		<view class="msgBox">
 			<messageItem wx:for="{{messageList}}" wx:key="index"  locationLabel="{{item.location_name}}" messageText="{{item.content}}" writer="{{item.user_name}}"  writeTime="{{item.time}}"></messageItem>

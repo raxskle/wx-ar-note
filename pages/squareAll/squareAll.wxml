@@ -11,7 +11,7 @@
 				<view class="{{'block '+' cbd ' + blockColors['东边cbd']}}" data-loc="东边cbd">cbd</view>
 				<view class="{{'block '+' dongtushuguan ' + blockColors['东图书馆']}}" data-loc="东图书馆">东图书馆</view>
 				<view class="{{'block '+' yunjiu ' + blockColors['韵苑食堂']}}" data-loc="韵苑食堂">韵酒</view>
-				<image mode="widthFix" class="img-main-east" src="../../assets/images/main-east.png" alt="主校区东"></image>
+				<image mode="widthFix" class="img-main-east" src="https://h5.hust.online/ar-note/main-east.png" alt="主校区东"></image>
 			</view>
 		</view>
 
@@ -34,7 +34,7 @@
 					东一食堂
 				</view>
 				<view class="{{'block '+' qinyuangongyu ' + blockColors['沁苑宿舍']}}" data-loc="沁苑宿舍">沁苑公寓</view>
-				<image mode="widthFix" class="img-main-mid" src="../../assets/images/main-mid.png" alt="主校区中"></image>
+				<image mode="widthFix" class="img-main-mid" src="https://h5.hust.online/ar-note/main-mid.png" alt="主校区中"></image>
 			</view>
 		</view>
 
@@ -53,7 +53,7 @@
 					西区宿舍
 				</view>
 
-				<image mode="widthFix" class="img-main-west" src="../../assets/images/main-west.png" alt="主校区西"></image>
+				<image mode="widthFix" class="img-main-west" src="https://h5.hust.online/ar-note/main-west.png" alt="主校区西"></image>
 			</view>
 
 		</view>
@@ -62,7 +62,7 @@
 
 			<view class="canva">
 				<view class="{{'block '+' tongjixiaoqu ' + blockColors['同济校区']}}" data-loc="同济校区">同济校区</view>
-				<image mode="widthFix" class="img-tongji" src="../../assets/images/tongji.png" alt="同济校区"></image>
+				<image mode="widthFix" class="img-tongji" src="https://h5.hust.online/ar-note/tongji.png" alt="同济校区"></image>
 			</view>
 		</view>
 		<view class="box">
@@ -70,7 +70,7 @@
 
 			<view class="canva2 btmMargin">
 				<view class="{{'block '+' wanganxiaoqu ' + blockColors['网安校区']}}" data-loc="网安校区">网安校区</view>
-				<image mode="widthFix" class="img-cse" src="../../assets/images/cse.png" alt="网安校区"></image>
+				<image mode="widthFix" class="img-cse" src="https://h5.hust.online/ar-note/cse.png" alt="网安校区"></image>
 
 			</view>
 		</view>
