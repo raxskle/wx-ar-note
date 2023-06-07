@@ -42,7 +42,7 @@ Page({
 
 		console.log("send:",this.data.locationName);
         
-        // 加载自己的留言，按时间倒序
+        // 加载自己的留言
 		wx.request({
 			url: "https://ar-note.hust.online/api/v1" + "/post",
 			method: "GET",
@@ -78,7 +78,7 @@ Page({
                 })
                 this.setData({messageList:_messageList});
                 
-                this.loadOtherUsersMsg(token);
+                this.loadOtherUsersMsg(token, openid);
 
 				this.setData({bottomTips:"暂无更多留言"})
 			},
@@ -89,8 +89,8 @@ Page({
         })
         
     },
-    loadOtherUsersMsg(token){
-        // 除自己外所有用户留言，随机顺序
+    loadOtherUsersMsg(token, openid){
+        // 除自己外所有用户留言
 		wx.request({
 			url: "https://ar-note.hust.online/api/v1" + "/post",
 			method: "GET",
@@ -108,7 +108,6 @@ Page({
 				let resList = res.data.data.post_list;
 					
 				// 如果大于20条，滑动到底可以再次请求
-				// 
 				console.log("not given user msg resList",resList);
 				
 				if(resList.length < 20){
@@ -119,11 +118,14 @@ Page({
 
                 let _messageList = this.data.messageList;
 				resList.forEach((msg)=>{
-					console.log(msg);
-					let msTime = msg.time < 1684000000000 ? msg.time*1000 : msg.time;
-                    msg.time = this.formatDateTime(msTime);
-                    
-					_messageList.push(msg);
+                    // 排除自己的留言
+                    if(msg.openid != openid){
+                        console.log(msg);
+                        let msTime = msg.time < 1684000000000 ? msg.time*1000 : msg.time;
+                        msg.time = this.formatDateTime(msTime);
+                        
+                        _messageList.push(msg);
+                    }
                 })
                 this.setData({messageList:_messageList});
 				
