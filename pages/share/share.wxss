@@ -39,9 +39,30 @@
 	margin-bottom: 2vh;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	/* background-color: #94e2e3; */
+}
+
+
+.home-btn{
+    height: 5vh;
+    width: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.home-btn-text{
+    position: absolute;
+    color: white;
 }
 
 .cancel{
@@ -55,5 +76,6 @@
     box-sizing: border-box;
 }
 .saveImg{
-    background-color: rgb(244, 170, 63);    
+    background-color: rgb(244, 170, 63);
 }
+

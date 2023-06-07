@@ -6,9 +6,16 @@
 
 				</view>
 				<view class="btnBar">
-					<button class="sharebtn cancel" bind:tap="backToAR" >取消</button>
-					<button class="sharebtn saveImg">保存到相册</button>
-				</view>  
+                    <view  class="toARPage home-btn" bind:tap="backToAR">
+                        <image class="btn-img" src="/assets/images/btn-grey.png"></image>
+                        <text class="home-btn-text">取消</text>
+                    </view>
+                    <view  class="toSquarePage home-btn" bind:tap="backToAR">
+                        <image class="btn-img" src="/assets/images/btn.png"></image>
+                        <text class="home-btn-text">保存到相册</text>
+                    </view>                    
+                </view>  
+
 			</view> 			
 		</view>
 

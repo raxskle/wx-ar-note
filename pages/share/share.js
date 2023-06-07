@@ -1,4 +1,5 @@
 // pages/share/share.js
+const app = getApp();
 Page({
 
     /**
@@ -7,8 +8,11 @@ Page({
     data: {
 
     },
-     backToAR (){
-		wx.navigateBack();
+    backToAR(){
+        const toARPageParam = app.globalData.location ? app.globalData.location : "";
+        wx.navigateTo({
+            url:"../index/index" + "?" + "position=" + toARPageParam
+        })
 	},
 
     /**
