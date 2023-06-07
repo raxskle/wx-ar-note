@@ -86,6 +86,11 @@ Page({
                 })
                 
 
+            }else if(this.data.messageValue.trim()=="" && this.data.idValue.trim()==""){
+                wx.showToast({
+                    title: '请输入',
+                    icon: "error"
+                })
             }else if(this.data.idValue.trim()==""){
                 wx.showToast({
                     title: '请输入昵称',
