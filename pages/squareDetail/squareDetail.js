@@ -42,7 +42,7 @@ Page({
 
 		console.log("send:",this.data.locationName);
         
-        // 加载自己的留言
+        // 加载自己的留言，按时间倒序
 		wx.request({
 			url: "https://ar-note.hust.online/api/v1" + "/post",
 			method: "GET",
@@ -53,7 +53,7 @@ Page({
 			  "openid": openid,
 			  "location_name": this.data.locationName,
 			  "limit":50,
-			  "order_by": "random",
+			  "order_by": "time",
 			  "is_include_recent_post": true
 			},
 			success:(res)=>{
@@ -90,7 +90,7 @@ Page({
         
     },
     loadOtherUsersMsg(token){
-        // 除自己外所有用户留言
+        // 除自己外所有用户留言，随机顺序
 		wx.request({
 			url: "https://ar-note.hust.online/api/v1" + "/post",
 			method: "GET",
