@@ -5,6 +5,9 @@
         <messageItem wx:for="{{messageList}}" wx:key="index"  locationLabel="{{item.location_name}}" messageText="{{item.content}}" writer="{{item.user_name}}"  writeTime="{{item.time}}"></messageItem>
     </view>
     <view class="blankArea">{{bottomTips}}</view>	
-    <view class="btmToScan" bindtap="toARPage">去扫码留言</view>
+    <view class="btmToScan" bindtap="toARPage">
+        <image class="btn-img" src="/assets/images/btn.png"></image>
+        <text>去扫码留言</text>
+    </view>
 </view>
 <pagetail></pagetail>    

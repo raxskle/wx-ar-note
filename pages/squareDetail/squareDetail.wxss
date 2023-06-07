@@ -36,7 +36,7 @@
 
 .blankArea{
 	width: 100vw;
-	height: 20vh;
+	height: 25vh;
 	margin-top: 5vh;
 	color: black;
 	display: flex;
@@ -46,15 +46,25 @@
 }
 
 .btmToScan{
-	width: 100vw;
+    width: 100vw;
+    display: flex;
 	height: 6vh;
-	margin-bottom: 6vh;
+	margin-bottom: 8vh;
 	position: fixed;
 	bottom: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color:  rgb(244, 170, 63);
-	color: white;
 	z-index: 1000;
+}
+
+.btn-img{
+    position: absolute;
+    width: 45%;
+    height: 100%;
+}
+
+.btmToScan > text{
+    position: absolute;
+    color: white;
 }
