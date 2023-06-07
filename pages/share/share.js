@@ -37,7 +37,7 @@ Page({
         })
         // 保存图片
         wx.saveImageToPhotosAlbum({
-            filePath: 'filePath',
+            filePath: '../../assets/images/share-img.png',
             success(res) {
                 // 保存完出一个弹窗
                 wx.showToast({
