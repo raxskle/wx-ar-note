@@ -35,6 +35,14 @@ Page({
                 console.log("post share fail",err);
             }
         })
+        // 保存图片
+        wx.saveImageToPhotosAlbum({
+          filePath: 'filePath',
+        })
+        // 保存完出一个弹窗
+        wx.showToast({
+            title: '保存图片成功',
+          })
     },
 
     /**
