@@ -1,11 +1,21 @@
 <!--components/messageItem/messageItem.wxml-->
 <view class="messageItem">
     <view class="messageBox">
+        <image class="msg-box-img" src="/assets/images/msg-item-box.png"></image>
+
+        <image class="msg-item-bg2-img" src="/assets/images/msg-item-bg2.png"></image>
+
         <view class="locationLabel">
+            <image class="msg-location-img" src="/assets/images/msg-item-bg4.png"></image>
             <image class="locationIcon"  src="../../assets/locationicon.png"></image>
             {{locationLabel}}
         </view>
-        <view class="messageText">{{messageText}}</view>
+
+        <view class="messageText">
+            <image class="msg-item-bg1-img" src="/assets/images/msg-item-bg1.png"></image>
+            <view class="messageRealText">{{messageText}}</view>
+            <image class="msg-item-bg3-img" src="/assets/images/msg-item-bg3.png"></image>           
+        </view>
         <view class="messageinfo"> 
             <view class="writer">{{writer}}</view>
             <view class="writeTime">{{writeTime}}</view>

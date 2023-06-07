@@ -9,22 +9,24 @@
 }
 
 .messageBox{
-	width: 85vw;
+	width: 100vw;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
 	box-sizing: border-box;
-	padding: 2vh;
+    padding: 2vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	position: relative;
-	
-	background-position: 0px 0px;
-	background-size: 100% 100%;
-	background-image: url("data:image/png;base64,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");
 
-	filter: drop-shadow(10px 10px 10px #8d8d8d);
+}
+
+.msg-box-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .locationIcon{
@@ -36,12 +38,16 @@
 	/* aspect-ratio: 1; */
 	/* background-color: green; */
 }
-
+.msg-location-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .locationLabel{
 	height: 5vh;
-	min-width: 60%;	
+	/* min-width: 50%;	 */
 	box-sizing: border-box ; 	
-	border: 1px solid #A6ACAF ;
+	/* border: 1px solid #A6ACAF ; */
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -49,23 +55,58 @@
 	margin-bottom: 2vh;
 	/* padding-left: 2vw; */
 	padding-right: 2vw;
-
+    position: absolute;
+    left: 10vw;
+    top: 4%;
 }
 
+
+.msg-item-bg2-img{
+    position: absolute;
+    top: 6%;
+    right: 10vw;
+    width: 26.6vw;
+    height: 13.0vw;
+}
+
+.msg-item-bg3-img{
+    position: absolute;
+    bottom: 8%;
+    /* top: 50%; */
+    left: 10vw;
+    width: 26.6vw;
+    height: 13.0vw;
+}
 .messageText{
-	border: 1px solid #A6ACAF ;
-	width: 100%;
-	min-height: 15vh;
+	/* border: 1px solid #A6ACAF ; */
+	width: 88%;
+	min-height: 20vh;    
 	box-sizing: border-box;
 	padding: 1vh;
-	padding-top: 2vh;
-	padding-bottom: 2vh;
+    position: relative;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.messageRealText{
+    width: 57%; 
+    height: 50%;
+    margin-top: 20%;
+    margin-bottom: 35%;
+}
+
+.msg-item-bg1-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .messageinfo{
-	height: 17vh;
+	height: 16vh;
 	/* width: 100%; */
-	display: flex;
+    display: flex;
+    margin-bottom: 10%;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-end;
@@ -77,8 +118,10 @@
 	min-width: 40%;
 	width: 100%;
 	/* height: 5vh; */
-	border: 1px solid #A6ACAF ;
-	margin-top: 2vh;
+    /* border: 1px solid #A6ACAF ; */
+    color: #71955A;
+    margin-top: 1vh;
+    margin-right: 6vw;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -93,8 +136,10 @@
 	min-width: 40% ;
 	width: 100%;
 	/* height: 5vh; */
-	border: 1px solid #A6ACAF ;
-	margin-top: 2vh;
+    /* border: 1px solid #A6ACAF ; */
+    color: #71955A;
+    /* margin-top: 1vh; */
+    margin-right: 6vw;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
