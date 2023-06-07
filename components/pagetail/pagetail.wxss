@@ -17,5 +17,6 @@
     
 .bytext{
     font-size: 14px;
+    margin-left: 1vw;
     /* font-weight: 600; */
 }
