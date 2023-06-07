@@ -9,7 +9,7 @@
       <image class="img-position" src="/assets/images/position.png" />
       <text id="position-text">{{position}}</text>
     </view>
-    <view class="side-item">
+    <view class="side-item" bindtap="shareHandler">
       <image class="img-share" src="/assets/images/share.png" />
       <text>分享</text>
     </view>
