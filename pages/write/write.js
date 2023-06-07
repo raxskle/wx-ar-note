@@ -41,9 +41,10 @@ Page({
                 }
                 })
         }else{
+            // 已扫码
             // 需要 openid(storage拿到) locationName (onload拿到)
             //      content(messageValue) id(idValue)
-            if(this.data.messageValue.trim()!="" && this.data.idValue.trim()!="" && this.data.messageValue.trim().length<=200){
+            if(this.data.messageValue.trim()!="" && this.data.idValue.trim()!="" && this.data.messageValue.trim().length<=150){
                 // send here
                 let token = wx.getStorageSync("token");
                 let openid = wx.getStorageSync("openid");
@@ -79,12 +80,23 @@ Page({
                         // 弹窗提示发言失败
                         wx.showToast({
                             title: '留言失败',
-                            })
+                            icon: "error"
+                        })
                     }
                 })
                 
 
-            }            
+            }else if(this.data.idValue.trim()==""){
+                wx.showToast({
+                    title: '请输入昵称',
+                    icon: "error"
+                })
+            }else if(this.data.messageValue.trim()==""){
+                wx.showToast({
+                    title: '请输入留言',
+                    icon: "error"
+                })
+            }
         }
 
     },

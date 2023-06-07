@@ -78,6 +78,7 @@ Page({
                 })
                 this.setData({messageList:_messageList});
                 
+                // 获取其他人的留言
                 this.loadOtherUsersMsg(token, openid);
 
 				this.setData({bottomTips:"暂无更多留言"})
@@ -181,9 +182,13 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-		console.log("bottom");
+		console.log("reach bottom");
 		if(this.data.hasMore){
-			this.getMessageByLocation(this.data.locationName);		
+            let token = wx.getStorageSync("token");
+            let openid = wx.getStorageSync("openid");
+            console.log("reach bottom has more")
+            // 获取其他人的留言
+            this.loadOtherUsersMsg(token, openid);	
 		}
     },
 
