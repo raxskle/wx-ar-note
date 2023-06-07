@@ -37,12 +37,22 @@ Page({
         })
         // 保存图片
         wx.saveImageToPhotosAlbum({
-          filePath: 'filePath',
+            filePath: 'filePath',
+            success(res) {
+                // 保存完出一个弹窗
+                wx.showToast({
+                    title: '保存图片成功',
+                })
+            },
+            fail(){
+                // 保存失败出一个弹窗
+                wx.showToast({
+                    title: '保存图片失败',
+                    icon: "error"
+                })              
+            }
         })
-        // 保存完出一个弹窗
-        wx.showToast({
-            title: '保存图片成功',
-          })
+
     },
 
     /**
