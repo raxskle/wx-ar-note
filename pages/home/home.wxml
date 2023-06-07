@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<image class="bgimg" src="https://h5.hust.online/ar-note/home-bg.jpg"  mode="aspectFill"></image>
+<image class="bgimg" src="https://h5.hust.online/ar-note/home-bg-2.jpg"  mode="aspectFill"></image>
 	<view class="container">
 		<view class="btnwrap">
 			<view class="btnContainer">
