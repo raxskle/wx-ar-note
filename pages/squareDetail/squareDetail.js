@@ -1,4 +1,5 @@
 // pages/squareDetail/squareDetail.js
+const app = getApp();
 Page({
 
     /**
@@ -40,7 +41,8 @@ Page({
         this.setData({bottomTips:"留言加载中..."});
 
 		console.log("send:",this.data.locationName);
-		
+        
+        // 加载自己的留言
 		wx.request({
 			url: "https://ar-note.hust.online/api/v1" + "/post",
 			method: "GET",
@@ -50,7 +52,7 @@ Page({
 			data:{
 			  "openid": openid,
 			  "location_name": this.data.locationName,
-			  "limit":20,
+			  "limit":50,
 			  "order_by": "random",
 			  "is_include_recent_post": true
 			},
@@ -58,12 +60,56 @@ Page({
 				console.log("get square detail success",res.data);
 				let resList = res.data.data.post_list;
 					
-
+				console.log("given user msg resList",resList);
 				
+				// if(resList.length < 20){
+                //     this.setData({hasMore:false})
+				// }else{
+				// 	this.setData({hasMore:true})
+				// }
 
+                let _messageList = this.data.messageList;
+				resList.forEach((msg)=>{
+					console.log(msg);
+					let msTime = msg.time < 1684000000000 ? msg.time*1000 : msg.time;
+                    msg.time = this.formatDateTime(msTime);
+                    
+					_messageList.push(msg);
+                })
+                this.setData({messageList:_messageList});
+                
+                this.loadOtherUsersMsg(token);
+
+				this.setData({bottomTips:"暂无更多留言"})
+			},
+			fail:(err)=>{
+				console.log("get square detail fail",err);
+				this.setData({bottomTips:"暂无更多留言"})
+			}
+        })
+        
+    },
+    loadOtherUsersMsg(token){
+        // 除自己外所有用户留言
+		wx.request({
+			url: "https://ar-note.hust.online/api/v1" + "/post",
+			method: "GET",
+			header:{
+				"Authorization": `Bearer ${token}`,
+			},
+			data:{
+			  "location_name": this.data.locationName,
+			  "limit":20,
+			  "order_by": "random",
+			  "is_include_recent_post": false
+			},
+			success:(res)=>{
+				console.log("get square detail success",res.data);
+				let resList = res.data.data.post_list;
+					
 				// 如果大于20条，滑动到底可以再次请求
 				// 
-				console.log("resList",resList);
+				console.log("not given user msg resList",resList);
 				
 				if(resList.length < 20){
                     this.setData({hasMore:false})
@@ -81,15 +127,11 @@ Page({
                 })
                 this.setData({messageList:_messageList});
 				
-				this.setData({bottomTips:"暂无更多留言"})
-				
 			},
 			fail:(err)=>{
-				console.log("get square detail fail",err);
-				this.setData({bottomTips:"暂无更多留言"})
+                console.log("get square detail fail",err);
 			}
 		})
-		
     },
     toARPage(){
         const toARPageParam = app.globalData.location ? app.globalData.location : "";
