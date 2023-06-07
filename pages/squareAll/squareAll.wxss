@@ -272,7 +272,7 @@
 }
 
 .title-img2{
-    height: 5vh;
-    width: 48vw;
+    height: 4.8vh;
+    width: 46vw;
     margin-top: 2vh;
 }
