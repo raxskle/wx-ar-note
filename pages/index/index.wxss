@@ -44,6 +44,11 @@
   white-space: pre;
 }
 
+.img-question {
+  width: 18px;
+  height: 24px;
+}
+
 .img-position {
   width: 27px;
   height: 21px;
@@ -79,8 +84,60 @@
   z-index: 10000;
 }
 
-.btn-send > .btn-img{
+.btn-img{
   position: fixed;
   width: 100%;
   height: 100%;
+}
+
+.modal{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10001;
+}
+
+.mask{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60vw;
+  border-radius: 16px;
+  background-color: white;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100000;
+}
+
+.modal-text{
+  font-size: 16px;
+  word-wrap: break-word;
+  margin-bottom: 8px;
+}
+
+.btn-confirm{
+  position: relative;
+  margin-top: 2vh;
+  width: 30vw;
+  height: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-confirm > text{
+  z-index: 100001;
+  font-size: 17px;
+  color: white;
 }

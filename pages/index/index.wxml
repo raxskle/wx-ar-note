@@ -1,21 +1,39 @@
 <!-- index.wxml -->
 <view class="container">
-  <ar-frame wx:if="{{isShowAR}}" bind:artrack="{{onARTrack}}" disable-scroll id="main-frame" textureList="{{textureList}}" width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{width}}px; height:{{height}}px;" />
+  <ar-frame wx:if="{{isShowAR}}" bind:artrack="{{onARTrack}}" disable-scroll id="main-frame" textureList="{{textureList}}" width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{width}}px;height:{{height}}px;" />
   <view wx:if="{{!isShowAR}}" wx:for="{{20}}" wx:for-index="index" wx:for-item="item" class="canvas-container">
     <canvas type="2d" id="canvas{{index}}"></canvas>
   </view>
   <view wx:if="{{isShowAR}}" class="side-bar">
-    <view class="side-item">
-      <image class="img-position" src="/assets/images/position.png" />
-      <text id="position-text">{{position === "" ? "  " : position}}</text>
+    <view class="side-item" bindtap="questionHandler">
+      <image class="img-question" src="/assets/images/question.png" />
+      <text>玩法</text>
     </view>
     <view class="side-item" bindtap="shareHandler">
       <image class="img-share" src="/assets/images/share.png" />
       <text>分享</text>
     </view>
+    <view wx:if="{{position}}" class="side-item" bindtap="positionHandler">
+      <image class="img-position" src="/assets/images/position.png" />
+      <text id="position-text">{{position}}</text>
+    </view>
   </view>
   <view wx:if="{{isShowSendBtn}}" class="btn-send" bindtap="sendHandler">
     <image class="btn-img" src="/assets/images/btn.png"></image>
     <text>我要留言</text>
+  </view>
+  <view class="modal" wx:if="{{isShowModal}}">
+    <view class="mask" bindtap="hideModal"></view>
+    <view class="modal-container">
+      <text class="modal-text">- 扫描线下海报中央枫叶图案，让AR纸条浮现吧！</text>
+      <text class="modal-text">- 当纸条重叠时，可以拖动来查看内容。没显示AR纸条？试试前后移动手机位置。</text>
+      <text class="modal-text">- 只有通过线下海报才能留言。我们在纸条广场中的每个地点都放置了海报，想解锁不同地点？前往寻找线下海报吧。</text>
+      <text class="modal-text">- 如果页面无法正常显示，请更新微信版本，或加入反馈群 578246140。</text>
+      <text class="modal-text">- 玩得开心！趁毕业前再在学校多走走 :D</text>
+      <view class="btn-confirm" bindtap="hideModal">
+        <image class="btn-img" src="/assets/images/btn.png"></image>
+        <text>确认</text>
+      </view>
+    </view>
   </view>
 </view>

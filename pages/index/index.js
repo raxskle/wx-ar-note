@@ -13,6 +13,12 @@ const color = [
     "rgb(255, 255, 255)",
 ];
 
+const questionText = `- 扫描线下海报中央枫叶图案，让AR纸条浮现吧！
+- 当纸条重叠时，可以拖动来查看内容。没显示AR纸条？试试前后移动手机位置。
+- 只有通过线下海报才能留言。我们在纸条广场中的每个地点都放置了海报，想解锁不同地点？前往寻找线下海报吧。
+- 如果页面无法正常显示，请更新微信版本，或加入反馈群 578246140。
+- 玩得开心！趁毕业前再在学校多走走 :D`;
+
 function compareVersion(v1, v2) {
     v1 = v1.split(".");
     v2 = v2.split(".");
@@ -50,6 +56,8 @@ Page({
         isShowAR: false,
         isShowSendBtn: false,
         position: "",
+        modalText: questionText,
+        isShowModal: false,
     },
     onLoad(e) {
         if (e.position && e.position !== "undefined") {
@@ -135,13 +143,28 @@ Page({
             url: "../share/share",
         });
     },
+    questionHandler(e) {
+        this.setData({ isShowModal: true });
+    },
+    hideModal(e) {
+        this.setData({ isShowModal: false });
+    },
+    positionHandler(e) {
+        wx.navigateTo({
+            url: "../squareAll/squareAll",
+        });
+    },
     methods: {
         getPostList: function (that) {
             console.log(that.data);
             let instance = new Promise((resolve, reject) => {
+                let token = wx.getStorageSync("token");
                 wx.request({
-                    url: `${url}/post?location_name=${that.data.position}&limit=15`,
+                    url: `${url}/post?location_name=${that.data.position}&limit=15&is_include_recent_post=true`,
                     method: "GET",
+                    header: {
+                        Authorization: `Bearer ${token}`,
+                    },
                     success: (res) => {
                         console.log(res);
                         that.setData({ postList: res.data.data.post_list });
