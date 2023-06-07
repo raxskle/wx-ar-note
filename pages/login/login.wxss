@@ -67,3 +67,28 @@
     box-sizing: border-box;
     
 }
+
+.home-btn{
+    position: fixed;
+    width: 30vw;
+    height: 6vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    bottom: 12vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.btn-img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.homt-btn-text{
+    position: fixed;
+    color: white;
+}

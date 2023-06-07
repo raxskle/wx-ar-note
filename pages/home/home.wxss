@@ -30,13 +30,7 @@
     align-items: center;
     z-index: 21;
 }
-.btnbox{
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
 .navigator {
     z-index: 22;
 }
@@ -60,11 +54,37 @@
     padding: 0px;
 }
 
-.btnbox button{
-    background-color: rgb(244, 170, 63);
-    color: white;
-    padding: 2vmin;
+.btnbox{
+    position: fixed;   
+    height: 6vh;     
+    width: 80vw;
+    /* left: 20vw;     */
+    bottom: 12vh;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home-btn{
+    position: relative;
     width: 30vw;
-    box-sizing: border-box;
-    
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+.btn-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.homt-btn-text{
+    position: absolute;
+    color: white;
 }

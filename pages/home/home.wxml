@@ -1,25 +1,27 @@
 <!--pages/home/home.wxml-->
-<image class="bgimg" src="https://h5.hust.online/ar-note/index-bg.jpg"  mode="aspectFill"></image>
+<image class="bgimg" src="../../assets/images/home-bg.jpg"  mode="aspectFill"></image>
 	<view class="container">
 		<view class="btnwrap">
 			<view class="btnContainer">
 				<view class="btnbox">
-						<button type="default" class="toARPage" bind:tap="toARPage">
-						{{toARBtn}}
-						</button>
-						<button type="default" class="toSquarePage" bind:tap="toSquareAll">
-						{{toSquareBtn}}
-						</button>
+						<view  class="toARPage home-btn" bind:tap="toARPage">
+                            <image class="btn-img" src="/assets/images/btn.png"></image>
+                            <text class="homt-btn-text">扫码留言</text>
+						</view>
+						<view  class="toSquarePage home-btn" bind:tap="toSquareAll">
+                            <image class="btn-img" src="/assets/images/btn.png"></image>
+                            <text class="homt-btn-text">纸条广场</text>
+						</view>
 				</view>
 				
-				<view class="btmtext">
+				<!-- <view class="btmtext">
 					<text>
 						我们在学校各个角落贴了不同的场所AR码						
 					</text>
 					<text>
 						找到才能留言哦						
 					</text>
-				</view>
+				</view> -->
 			</view>
 		</view>
 
