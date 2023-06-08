@@ -19,6 +19,32 @@ const questionText = `- 扫描线下海报中央枫叶图案，让AR纸条浮现
 - 如果页面无法正常显示，请更新微信版本，或加入反馈群 578246140。
 - 玩得开心！趁毕业前再在学校多走走 :D`;
 
+const positionMap = new Map([
+    ["东九教学楼", "东九"],
+    ["西十二教学楼", "西十二"],
+    ["工训中心", "工训中心"],
+    ["中操", "中操"],
+    ["西操", "西操"],
+    ["东操", "东操"],
+    ["东图书馆", "东图"],
+    ["主图书馆", "主图"],
+    ["光谷体育馆", "光体"],
+    ["东边cbd", "东边cbd"],
+    ["韵苑学生食堂", "韵酒"],
+    ["喻园食堂", "喻园"],
+    ["东一食堂", "东一"],
+    ["百景园", "百景园"],
+    ["西一食堂", "西一"],
+    ["西二食堂", "西二"],
+    ["韵苑宿舍", "韵苑"],
+    ["沁苑5栋宿舍", "沁苑"],
+    ["东区宿舍", "东区宿舍"],
+    ["西区宿舍", "西区宿舍"],
+    ["紫菘宿舍", "紫菘"],
+    ["网安校区", "网安"],
+    ["同济校区", "同济"],
+]);
+
 function compareVersion(v1, v2) {
     v1 = v1.split(".");
     v2 = v2.split(".");
@@ -58,8 +84,15 @@ Page({
         position: "",
         modalText: questionText,
         isShowModal: false,
+        positionName: "",
     },
     onLoad(e) {
+        this.setData({
+            positionName: positionMap.get(this.data.position)
+                ? positionMap.get(this.data.position)
+                : position,
+        });
+
         if (e.position && e.position !== "undefined") {
             this.setData({ position: e.position });
         }

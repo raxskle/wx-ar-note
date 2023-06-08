@@ -15,7 +15,7 @@
     </view>
     <view wx:if="{{position}}" class="side-item" bindtap="positionHandler">
       <image class="img-position" src="/assets/images/position.png" />
-      <text id="position-text">{{position}}</text>
+      <text id="position-text">{{positionName}}</text>
     </view>
   </view>
   <view wx:if="{{isShowSendBtn}}" class="btn-send" bindtap="sendHandler">
