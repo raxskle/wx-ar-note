@@ -6,6 +6,14 @@
     position: relative;
 }
 
+.square-tip{
+    position: absolute;
+    width: fit-content;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .squareWrap {
     width: 100vw;
     height: auto;

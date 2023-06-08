@@ -1,5 +1,6 @@
 <!--pages/squareAll/squareAll.wxml-->
 <view class="container">
+	<view class="square-tip">试试点击特定地点，查看详细留言</view>
 	<view class="squareWrap" bindtap="handleClickBlock">
 		<view class="box">
             <!-- <text class="boxtitle title1">主校区东</text> -->
