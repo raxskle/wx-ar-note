@@ -87,12 +87,6 @@ Page({
         positionName: "",
     },
     onLoad(e) {
-        this.setData({
-            positionName: positionMap.get(this.data.position)
-                ? positionMap.get(this.data.position)
-                : position,
-        });
-
         if (e.position && e.position !== "undefined") {
             this.setData({ position: e.position });
         }
@@ -106,6 +100,9 @@ Page({
             height,
             renderWidth: width * dpi,
             renderHeight: height * dpi,
+            positionName: positionMap.get(e.position)
+                ? positionMap.get(e.position)
+                : e.position,
         });
 
         const version = wx.getAppBaseInfo().SDKVersion;
