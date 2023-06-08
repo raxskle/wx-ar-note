@@ -33,20 +33,20 @@ Page({
      */
     onLoad(options) {
         if(!app.globalData.location){
-            wx.showModal({
-                title: '未扫码',
-                content: '请通过扫描二维码进入小程序',
-                showCancel: false,
-                complete: (res) => {
-                    if (res.cancel) {
+            // wx.showModal({
+            //     title: '未扫码',
+            //     content: '请通过扫描二维码进入小程序',
+            //     showCancel: false,
+            //     complete: (res) => {
+            //         if (res.cancel) {
                     
-                    }
+            //         }
                 
-                    if (res.confirm) {
+            //         if (res.confirm) {
                     
-                    }
-                }
-                })
+            //         }
+            //     }
+            //     })
         }else{
             // 已获取地点信息 发送地点标记请求
             this.setData({location:app.globalData.location});
