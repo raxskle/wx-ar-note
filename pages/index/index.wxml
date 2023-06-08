@@ -27,8 +27,8 @@
     <view class="modal-container">
       <text class="modal-text">- 扫描线下海报中央枫叶图案，让AR纸条浮现吧！</text>
       <text class="modal-text">- 当纸条重叠时，可以拖动来查看内容。没显示AR纸条？试试前后移动手机位置。</text>
-      <text class="modal-text">- 只有通过线下海报才能留言。我们在纸条广场中的每个地点都放置了海报，想解锁不同地点？前往寻找线下海报吧。</text>
-      <text class="modal-text">- 如果页面无法正常显示，请更新微信版本，或加入反馈群 578246140。</text>
+      <text class="modal-text">- 只有通过线下海报才能留言。我们在纸条广场中的每个地点都放置了海报，想解锁不同地点留言权限？前往寻找线下海报吧。</text>
+      <text class="modal-text">- 如果页面无法正常显示，请更新微信版本，或加入QQ反馈群 578246140。</text>
       <text class="modal-text">- 玩得开心！趁毕业前再在学校多走走 :D</text>
       <view class="btn-confirm" bindtap="hideModal">
         <image class="btn-img" src="/assets/images/btn.png"></image>
