@@ -1,9 +1,9 @@
 <!--pages/share/share.wxml-->
 <view class="container">
-		<view class="popupwrap"> 
+		<view class="popupwrap">
 			<view class="popup">
 				<view class="canvasBox">
-                    <image class="share-img" mode="aspectFit" src="/assets/images/share-img.png"></image>
+                    <image class="share-img" mode="aspectFit" src="https://h5.hust.online/ar-note/share-img.png"></image>
 				</view>
 				<view class="btnBar">
                     <view  class="toARPage home-btn" bind:tap="backToAR">
