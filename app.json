@@ -6,7 +6,7 @@
         "pages/index/index",
         "pages/home/home",
        "pages/share/share",
-       "pages/write/write"        
+       "pages/write/write"   
     ],
     "window": {
         "backgroundTextStyle": "light",

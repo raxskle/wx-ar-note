@@ -6,7 +6,7 @@
             <view class="btnbox">
                     <view  bind:touchstart="onWeixinLogin" class="home-btn">
                         <image class="btn-img" src="/assets/images/btn.png"></image>
-                        <text class="home-btn-text">我要留言</text>
+                        <text class="home-btn-text">点击登录</text>
                     </view>
             </view>
             

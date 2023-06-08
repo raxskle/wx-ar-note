@@ -1,13 +1,4 @@
 /* pages/squareAll/squareAll.wxss */
-@font-face {
-    font-family: "myfont"; /* 这里的字体名称是自定义的 */
-    /* src: url("../../assets/map-font.ttf"); */
-    src: url("https://h5.hust.online/ar-note/map-font.ttf");
-
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 .container {
     height: 100vh;
@@ -35,7 +26,6 @@
 .boxtitle {
     font-size: 28px;
     color: #246645;
-    font-family: "myfont";
     margin-left: 38px;
 }
 

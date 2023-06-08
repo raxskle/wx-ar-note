@@ -36,13 +36,34 @@ Page({
             }
         })
         // 保存图片
-        wx.saveImageToPhotosAlbum({
-          filePath: 'filePath',
+        // 
+        let fileUrl;
+        wx.downloadFile({
+          url: 'https://h5.hust.online/ar-note/share-img.png',
+          success(res){
+            fileUrl = res.tempFilePath;
+
+            wx.saveImageToPhotosAlbum({
+                filePath: fileUrl,
+                success(res) {
+                    // 保存完出一个弹窗
+                    wx.showToast({
+                        title: '保存图片成功',
+                    })
+                },
+                fail(){
+                    // 保存失败出一个弹窗
+                    wx.showToast({
+                        title: '保存图片失败',
+                        icon: "error"
+                    })              
+                }
+            })            
+          }
         })
-        // 保存完出一个弹窗
-        wx.showToast({
-            title: '保存图片成功',
-          })
+
+
+
     },
 
     /**
