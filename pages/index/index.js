@@ -100,9 +100,9 @@ Page({
             height,
             renderWidth: width * dpi,
             renderHeight: height * dpi,
-            positionName: positionMap.get(e.position)
-                ? positionMap.get(e.position)
-                : e.position,
+            positionName: positionMap.get(this.data.position)
+                ? positionMap.get(this.data.position)
+                : this.data.position,
         });
 
         const version = wx.getAppBaseInfo().SDKVersion;
