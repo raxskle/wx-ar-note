@@ -190,7 +190,7 @@ Page({
             let instance = new Promise((resolve, reject) => {
                 let token = wx.getStorageSync("token");
                 wx.request({
-                    url: `${url}/post?location_name=${that.data.position}&limit=15&is_include_recent_post=true`,
+                    url: `${url}/post?limit=15&is_include_recent_post=true`,
                     method: "GET",
                     header: {
                         Authorization: `Bearer ${token}`,
